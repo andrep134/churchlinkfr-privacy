@@ -3,34 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Politique de confidentialité — ChurchLinkfr</title>
+  <title>Politique de confidentialité — ChurchLink</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f9f9f9;
-      color: #1a1a1a;
+      font-family: Georgia, 'Times New Roman', serif;
+      background:
+        radial-gradient(circle at top, rgba(15, 71, 128, 0.08), transparent 38%),
+        linear-gradient(180deg, #f7f3ea 0%, #ffffff 45%, #f4f7fb 100%);
+      color: #1c2430;
       line-height: 1.7;
     }
     header {
-      background: #1a3c6e;
+      background: linear-gradient(135deg, #0f3f73 0%, #1e6f8d 100%);
       color: white;
-      padding: 40px 24px;
+      padding: 56px 24px 44px;
       text-align: center;
+      box-shadow: 0 12px 30px rgba(15, 63, 115, 0.18);
     }
-    header h1 { font-size: 1.8rem; margin-bottom: 6px; }
-    header p { font-size: 0.95rem; opacity: 0.8; }
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+    header p { font-size: 0.98rem; opacity: 0.9; }
     main {
       max-width: 780px;
-      margin: 40px auto;
-      padding: 0 24px 60px;
+      margin: 44px auto;
+      padding: 0 24px 72px;
     }
-    section { margin-bottom: 36px; }
+    section {
+      margin-bottom: 28px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(18, 64, 115, 0.08);
+      border-radius: 18px;
+      padding: 24px 22px;
+      box-shadow: 0 10px 28px rgba(12, 37, 66, 0.06);
+      backdrop-filter: blur(4px);
+    }
     h2 {
-      font-size: 1.15rem;
-      color: #1a3c6e;
-      margin-bottom: 10px;
-      border-left: 4px solid #1a3c6e;
+      font-size: 1.12rem;
+      color: #0f3f73;
+      margin-bottom: 12px;
+      border-left: 4px solid #0f3f73;
       padding-left: 12px;
     }
     p { margin-bottom: 10px; }
@@ -38,19 +53,32 @@
     li { margin-bottom: 6px; }
     .badge {
       display: inline-block;
-      background: #e8f0fe;
-      color: #1a3c6e;
-      border-radius: 6px;
-      padding: 2px 10px;
-      font-size: 0.85rem;
+      background: #e5effc;
+      color: #0f3f73;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 0.8rem;
       font-weight: 600;
+    }
+    .lead {
+      font-size: 1.02rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 720px;
+      margin: 0 auto;
     }
     footer {
       text-align: center;
       font-size: 0.82rem;
-      color: #888;
+      color: #5f6773;
       padding: 24px;
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid rgba(18, 64, 115, 0.12);
+    }
+    a {
+      color: #0f3f73;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -58,7 +86,11 @@
 
 <header>
   <h1>Politique de confidentialité</h1>
-  <p>ChurchLinkfr &nbsp;|&nbsp; Dernière mise à jour : 31 mars 2026</p>
+  <p>ChurchLink &nbsp;|&nbsp; Dernière mise à jour : 1 avril 2026</p>
+  <p class="lead">
+    Cette page explique quelles données ChurchLink traite, pourquoi elles sont utilisées,
+    et comment elles sont protégées lorsque vous utilisez l'application.
+  </p>
 </header>
 
 <main>
@@ -66,7 +98,7 @@
   <section>
     <h2>1. Présentation</h2>
     <p>
-      ChurchLinkfr est une application mobile destinée aux membres d'églises évangéliques.
+      ChurchLink est une application mobile destinée aux membres d'églises évangéliques.
       Elle permet de suivre les annonces, les cultes, les prières et de rester connecté à la communauté.
     </p>
     <p>
@@ -105,7 +137,7 @@
   </section>
 
   <section>
-    <h2>4. Utilisation du microphone</h2>
+    <h2>4. Utilisation du microphone <span class="badge">android.permission.RECORD_AUDIO</span></h2>
     <p>
       Le microphone est utilisé uniquement pour les appels audio/vidéo et l'enregistrement de messages vocaux de prière.
       Aucun audio n'est conservé sans votre action explicite d'envoi.
@@ -113,7 +145,7 @@
   </section>
 
   <section>
-    <h2>5. Accès à la galerie</h2>
+    <h2>5. Accès à la galerie <span class="badge">READ_MEDIA_IMAGES / READ_MEDIA_VIDEO</span></h2>
     <p>
       L'accès à votre galerie photo est utilisé uniquement pour vous permettre de sélectionner
       une image à partager ou à définir comme photo de profil. Nous n'accédons pas à vos photos
@@ -122,7 +154,7 @@
   </section>
 
   <section>
-    <h2>6. Notifications</h2>
+    <h2>6. Notifications <span class="badge">POST_NOTIFICATIONS</span></h2>
     <p>
       Avec votre autorisation, nous envoyons des notifications push pour vous informer
       des annonces, événements et messages de votre église via Firebase Cloud Messaging.
@@ -137,7 +169,7 @@
       Les données ne sont partagées qu'avec :
     </p>
     <ul>
-      <li><strong>Google Firebase</strong> — hébergement et authentification (politique : policies.google.com)</li>
+      <li><strong>Google Firebase</strong> — authentification, base de données, stockage et notifications</li>
     </ul>
   </section>
 
@@ -164,14 +196,14 @@
     <h2>10. Contact</h2>
     <p>
       Pour toute question concernant cette politique de confidentialité, contactez-nous à :<br />
-      <strong>eglisebethesda.contact@gmail.com</strong>
+      <strong><a href="mailto:eglisebethesda.contact@gmail.com">eglisebethesda.contact@gmail.com</a></strong>
     </p>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2026 ChurchLinkfr — Tous droits réservés
+  &copy; 2026 ChurchLink — Tous droits réservés
 </footer>
 
 </body>
