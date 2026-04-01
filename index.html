@@ -21,6 +21,21 @@
       text-align: center;
       box-shadow: 0 12px 30px rgba(15, 63, 115, 0.18);
     }
+    .logo-wrap {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 18px;
+      padding: 10px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
     header h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
       margin-bottom: 8px;
@@ -80,17 +95,32 @@
     a:hover {
       text-decoration: underline;
     }
+    .meta {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
 
 <header>
+  <div class="logo-wrap">
+    <img
+      src="https://raw.githubusercontent.com/andrep134/ChurchLink/main/frontend/assets/images/ChurchLinkLogo.png"
+      alt="Logo ChurchLink"
+    />
+  </div>
   <h1>Politique de confidentialité</h1>
   <p>ChurchLink &nbsp;|&nbsp; Dernière mise à jour : 1 avril 2026</p>
   <p class="lead">
     Cette page explique quelles données ChurchLink traite, pourquoi elles sont utilisées,
     et comment elles sont protégées lorsque vous utilisez l'application.
   </p>
+  <p class="meta">Application mobile communautaire pour annonces, échanges, prières et appels</p>
 </header>
 
 <main>
@@ -109,19 +139,38 @@
 
   <section>
     <h2>2. Données collectées</h2>
-    <p>Lors de votre inscription, nous collectons :</p>
+    <p>Selon votre utilisation de l'application, nous pouvons collecter ou traiter :</p>
     <ul>
       <li>Prénom et nom</li>
       <li>Adresse e-mail</li>
       <li>Numéro de téléphone (optionnel)</li>
       <li>Photo de profil (optionnelle)</li>
       <li>Église de rattachement</li>
+      <li>Messages, publications, sujets de prière, événements et autres contenus que vous choisissez de partager</li>
+      <li>Fichiers, images, vidéos ou audios envoyés volontairement dans l'application</li>
+      <li>Identifiants techniques nécessaires au fonctionnement de l'application et aux notifications</li>
     </ul>
-    <p>Ces données sont stockées de façon sécurisée dans Google Firebase (Firestore).</p>
+    <p>
+      Ces données sont utilisées uniquement pour fournir les fonctionnalités de ChurchLink
+      et sont stockées de façon sécurisée via les services nécessaires au fonctionnement de l'application.
+    </p>
   </section>
 
   <section>
-    <h2>3. Utilisation de la caméra <span class="badge">android.permission.CAMERA</span></h2>
+    <h2>3. Finalités du traitement</h2>
+    <p>Nous utilisons ces données pour :</p>
+    <ul>
+      <li>Créer et gérer votre compte</li>
+      <li>Afficher votre profil et votre appartenance à une communauté</li>
+      <li>Permettre les échanges entre membres, les publications et les interactions communautaires</li>
+      <li>Permettre l'envoi de fichiers, d'images, d'audios et la participation aux appels</li>
+      <li>Envoyer des notifications liées à l'activité de votre communauté</li>
+      <li>Maintenir la sécurité, l'intégrité et le bon fonctionnement du service</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. Utilisation de la caméra <span class="badge">android.permission.CAMERA</span></h2>
     <p>
       L'application demande l'accès à votre caméra <strong>uniquement</strong> pour les usages suivants :
     </p>
@@ -137,7 +186,7 @@
   </section>
 
   <section>
-    <h2>4. Utilisation du microphone <span class="badge">android.permission.RECORD_AUDIO</span></h2>
+    <h2>5. Utilisation du microphone <span class="badge">android.permission.RECORD_AUDIO</span></h2>
     <p>
       Le microphone est utilisé uniquement pour les appels audio/vidéo et l'enregistrement de messages vocaux de prière.
       Aucun audio n'est conservé sans votre action explicite d'envoi.
@@ -145,7 +194,7 @@
   </section>
 
   <section>
-    <h2>5. Accès à la galerie <span class="badge">READ_MEDIA_IMAGES / READ_MEDIA_VIDEO</span></h2>
+    <h2>6. Accès à la galerie <span class="badge">READ_MEDIA_IMAGES / READ_MEDIA_VIDEO</span></h2>
     <p>
       L'accès à votre galerie photo est utilisé uniquement pour vous permettre de sélectionner
       une image à partager ou à définir comme photo de profil. Nous n'accédons pas à vos photos
@@ -154,7 +203,7 @@
   </section>
 
   <section>
-    <h2>6. Notifications <span class="badge">POST_NOTIFICATIONS</span></h2>
+    <h2>7. Notifications <span class="badge">POST_NOTIFICATIONS</span></h2>
     <p>
       Avec votre autorisation, nous envoyons des notifications push pour vous informer
       des annonces, événements et messages de votre église via Firebase Cloud Messaging.
@@ -163,37 +212,101 @@
   </section>
 
   <section>
-    <h2>7. Partage des données</h2>
+    <h2>8. Base légale et consentement</h2>
+    <p>
+      Nous traitons vos données pour exécuter le service que vous demandez lorsque vous utilisez ChurchLink,
+      pour répondre à vos actions explicites dans l'application, et, lorsque requis, sur la base de votre consentement,
+      notamment pour les permissions sensibles comme la caméra, le microphone, la galerie et les notifications.
+    </p>
+    <p>
+      Vous pouvez refuser certaines permissions. Dans ce cas, certaines fonctionnalités associées peuvent ne pas être disponibles.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Partage des données</h2>
     <p>
       Nous ne vendons, ne louons et ne partageons vos données personnelles avec aucun tiers commercial.
       Les données ne sont partagées qu'avec :
     </p>
     <ul>
       <li><strong>Google Firebase</strong> — authentification, base de données, stockage et notifications</li>
+      <li><strong>Prestataires techniques strictement nécessaires</strong> au fonctionnement, à l'hébergement et à la sécurisation du service</li>
     </ul>
+    <p>
+      Ces traitements sont réalisés uniquement dans la mesure nécessaire au fonctionnement de l'application.
+    </p>
   </section>
 
   <section>
-    <h2>8. Sécurité</h2>
+    <h2>10. Conservation des données</h2>
+    <p>
+      Nous conservons vos données aussi longtemps que votre compte est actif ou aussi longtemps que nécessaire
+      pour fournir les services proposés dans ChurchLink.
+    </p>
+    <p>
+      Certaines informations peuvent être conservées pendant une durée raisonnable pour des raisons de sécurité,
+      de prévention des abus, de continuité du service ou pour satisfaire à des obligations légales applicables.
+    </p>
+  </section>
+
+  <section>
+    <h2>11. Sécurité</h2>
     <p>
       Vos données sont protégées par les règles de sécurité Firestore. Chaque utilisateur
       n'a accès qu'aux données de son propre profil et de son église. Les communications
       avec les serveurs sont chiffrées via HTTPS.
     </p>
+    <p>
+      Malgré nos efforts raisonnables, aucun système n'offre une sécurité absolue.
+      Nous vous recommandons également de protéger votre appareil et vos identifiants de connexion.
+    </p>
   </section>
 
   <section>
-    <h2>9. Vos droits</h2>
+    <h2>12. Vos droits</h2>
     <p>Vous pouvez à tout moment :</p>
     <ul>
       <li>Consulter vos données depuis votre profil dans l'application</li>
       <li>Modifier ou supprimer votre compte</li>
       <li>Nous contacter pour toute demande relative à vos données</li>
     </ul>
+    <p>
+      Selon votre lieu de résidence, vous pouvez également disposer de droits complémentaires,
+      notamment d'accès, de rectification, de suppression ou de limitation du traitement.
+    </p>
   </section>
 
   <section>
-    <h2>10. Contact</h2>
+    <h2>13. Enfants</h2>
+    <p>
+      ChurchLink n'est pas conçue pour collecter sciemment des données personnelles d'enfants sans autorisation appropriée.
+      Si vous pensez qu'une donnée a été fournie de manière inappropriée, contactez-nous afin que nous puissions l'examiner.
+    </p>
+  </section>
+
+  <section>
+    <h2>14. Transferts et hébergement</h2>
+    <p>
+      Les données peuvent être traitées et hébergées sur des infrastructures exploitées par nos prestataires techniques,
+      y compris dans des juridictions autres que votre lieu de résidence. Nous choisissons des services reconnus pour leur sécurité
+      et leur fiabilité afin d'assurer le fonctionnement de l'application.
+    </p>
+  </section>
+
+  <section>
+    <h2>15. Modifications de cette politique</h2>
+    <p>
+      Cette politique de confidentialité peut être mise à jour pour refléter les évolutions de ChurchLink,
+      de ses fonctionnalités, de ses prestataires techniques ou des exigences légales applicables.
+    </p>
+    <p>
+      La date de dernière mise à jour affichée en haut de cette page sera modifiée en conséquence.
+    </p>
+  </section>
+
+  <section>
+    <h2>16. Contact</h2>
     <p>
       Pour toute question concernant cette politique de confidentialité, contactez-nous à :<br />
       <strong><a href="mailto:philippeadrien123@gmail.com">philippeadrien123@gmail.com</a></strong>
